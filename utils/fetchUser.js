@@ -6,7 +6,7 @@ const fetchUser = async () => {
   try {
     const response = await fetch(url);
     const data = await response.json();
-    const { results } = { ...data };
+    const { results } = data;
     const {
       phone,
       email,
