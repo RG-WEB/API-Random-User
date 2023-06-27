@@ -12,7 +12,10 @@ const btns = document.querySelectorAll(".icon");
 // affiche les infos de l'utilisateur
 const displayUser = (person) => {
   img.src = person.large;
+  title.textContent = "My name is";
   user.textContent = person.name;
+  removeActive(btns);
+  btns[0].classList.add("active");
   btns.forEach((btn) => {
     const label = btn.dataset.label;
     btn.addEventListener("click", () => {
